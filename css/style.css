@@ -40,13 +40,23 @@ body {
   margin: auto 5px;
 }
 
-.header-left a {
-  display: inline;
-  color: rgba(0, 0, 0, 0.87);
-  float: left;
-  padding: 5px 5px;
+.leftheader {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  list-style-type: none;
+  overflow: hidden;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+}
+
+.leftheader a:hover {
+  text-decoration: underline;
+}
+
+.leftheader a {
   text-decoration: none;
-  margin: auto 5px;
+  color: #262627;
 }
 
 .headerli a:hover {
@@ -93,8 +103,25 @@ body {
   height: 44px;
   margin: 0 auto;
   margin-top: -77px;
-  width: auto;
-  max-width: 582px;
+  width: 480px;
+}
+
+.buttons input[type="submit"],
+.gbqfba {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 div.search {
@@ -172,15 +199,17 @@ div.search-area:hover {
   appearance: textfield;
   cursor: text;
   border: none;
-  width: 480px;
+
 }
 
 .voice-input {
   display: flex;
   flex: 0 0 auto;
   margin-top: -5px;
+  margin-left: -100px;
   align-items: stretch;
   flex-direction: row;
+  color: transparent;
 }
 
 .voice-area {
@@ -203,15 +232,6 @@ div.search-area:hover {
   width: 24px;
   background-size: 24px;
   vertical-align: middle;
-}
-
-.buttons {
-  margin: 0;
-  position: absolute;
-  top: 39%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 .googlesearch {
